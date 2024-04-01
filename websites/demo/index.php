@@ -14,22 +14,34 @@
   </style>
 </head>
 <body>
+  <h1>Recommended Books for you</h1>
+
   <?php 
-    $name = 'dark matter';
-    $read = false;
+    $books = [
+      [
+        'name' => 'Do Androids Dream of Electric Sheep',
+        'author' => 'Philip K. Dick',
+        'purchaseUrl' => 'https://example.com'
+      ],
+      [
+        'name' => 'Project Hail Mary',
+        'author' => 'Andy Weir',
+        'purchaseUrl' => 'https://example.com'
+      ],
+
+    ];
+
   ?>
-      <?php 
-        if($read){
-          $message = "You have read $name"; 
-        } else {
-          $message = "You have not read $name";
-        }
-         
-        ?>
-    
-    <h1>
-      <?php echo $message; ?>
-      <?= $message ?>
-  </h1>
+
+  <ul>
+    <?php foreach($books as $book) : ?>
+        <li>
+          <a href="<?= $book['purchaseUrl']; ?>">
+            <?= $book['name']; ?>
+          </a>
+        </li>
+    <?php endforeach; ?>
+  
+  </ul>
 </body>
 </html>
