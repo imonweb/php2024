@@ -1,42 +1,16 @@
 <?php 
-  
-  $books = [
-    [
-      'name' => 'Do Androids Dream of Electric Sheep',
-      'author' => 'Philip K. Dick',
-      'releaseYear' => 1968,
-      'purchaseUrl' => 'https://example.com'
-    ],
-    [
-      'name' => 'Project Hail Mary',
-      'author' => 'Andy Weir',
-      'releaseYear' => 2021,
-      'purchaseUrl' => 'https://example.com'
-    ],
-    [
-      'name' => 'The Martin',
-      'author' => 'Andy Weir',
-      'releaseYear' => 2011,
-      'purchaseUrl' => 'https://example.com'
-    ],
 
-  ];
+$business = [
+  'name' => 'Laracasts',
+  'cost' => 15,
+  'categories' => ["Testing", "PHP", "JavaScript"]
+];
 
-  function filter($items, $fn) {
-    // 
-    $filteredItems = [];
+function register($user){
+  // Create the user record in the db.
+  // Log them in
+  // Send a welcome email 
+  // Redirect to their new dashboard
+}
 
-    foreach($items as $item){
-      if($fn($item)){
-        $filteredItems[] = $item;
-      }
-    }
-    return $filteredItems;
-  };
-
-  $filteredBooks = array_filter($books, function($book){
-    return $book['releaseYear'] < 2000;
-    // return $book['author'] === 'Andy Weir';
-  });
-
-  require "index.view.php";
+require "index.view.php";
