@@ -8,7 +8,7 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="http://localhost/php/Laracasts/php-2024/websites/demo/index.php" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
+              <a href="http://localhost/php/Laracasts/php-2024/websites/demo/index.php" class="<?php if($_SERVER['REQUEST_URI'] === 'http://localhost/php/Laracasts/php-2024/websites/demo/index.php') {echo 'bg-gray-900 text-white'; } else {echo 'text-gray-300'; } ?> text-gray-300 hover:bg-gray-700 px-3 rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
               <a href="http://localhost/php/Laracasts/php-2024/websites/demo/about.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
               <a href="http://localhost/php/Laracasts/php-2024/websites/demo/contact.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
              

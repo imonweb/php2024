@@ -12,4 +12,6 @@ function dd($value) {
 
 echo $_SERVER['REQUEST_URI'];
 
+// dd($_SERVER);
+
 require "views/index.view.php";
