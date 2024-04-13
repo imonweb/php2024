@@ -4,6 +4,11 @@ require 'functions.php';
 
 $heading = 'Home Page';
 
+// echo '<pre>';
+// var_dump($_SERVER);
+// echo '</pre';
+
+// die();
 
 
 // function dd($value) {
